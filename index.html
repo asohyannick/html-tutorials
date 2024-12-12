@@ -15,13 +15,27 @@
     </style>
   </head>
   <body>
-    <h2>Registration is now available on our platform</h2>
-    <form action="" method="#">
-       <label for="search">Search for anything:</label>
-       <input type="search" name="search"> 
-       <input type="submit" value="search">
-       <label for="file" >Select a file:</label>
-       <input type="file" name="file">
-    </form>
+    <h1 class="canvas">Welcome to my Canvas store</h1>
+    <h2 class="canvas_item">
+      I loving drawing cool graphics using the canvas API
+    </h2>
+    <div id="canvas_store">
+      <p>Please check out my canvas online store.</p>
+    </div>
+    <canvas id="myCanvas" style="width: 230px; height: 230px"> </canvas>
+    <script>
+      // JavaScript code to draw on the canvas
+      let canvas = document.getElementById("myCanvas");
+      let ctx = canvas.getContext("2d");
+      // Draw a green rectangle
+      ctx.fillStyle = "green";
+      ctx.fillRect(50, 50, 100, 50);
+      // Draw a yellow circle
+      ctx.beginPath();
+      ctx.arc(300, 100, 50, 0, 2 * Math.PI);
+      ctx.fillStyle = "blue";
+      ctx.fill();
+      ctx.closePath();
+    </script>
   </body>
 </html>
